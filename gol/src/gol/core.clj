@@ -13,6 +13,7 @@
 	 	(get-central-cells-state neighborhood)))
 
 (defn extract-neighborhood [board x y]
+	(def size (count board))
 	(concat 
 		[(nth (board (- y 1) ) (- x 1) 0)
 	     (nth (board (- y 1) )    x    0)
