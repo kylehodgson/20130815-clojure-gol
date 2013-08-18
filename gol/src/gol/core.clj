@@ -14,15 +14,15 @@
 
 (defn extract-neighborhood [board x y]
 	(concat 
-		[(get (board (- y 1) ) (- x 1) 0)
-	     (get (board (- y 1) )    x    0)
-	     (get (board (- y 1) ) (+ x 1) 0)]
-	    [(get (board    y    ) (- x 1) 0)
-	     (get (board    y    )    x    0)
-	     (get (board    y    ) (+ x 1) 0)]
-	    [(get (board (+ y 1) ) (- x 1) 0)
-	     (get (board (+ y 1) )    x    0)
-	     (get (board (+ y 1) ) (+ x 1) 0)] ))
+		[(nth (board (- y 1) ) (- x 1) 0)
+	     (nth (board (- y 1) )    x    0)
+	     (nth (board (- y 1) ) (+ x 1) 0)]
+	    [(nth (board    y    ) (- x 1) 0)
+	     (nth (board    y    )    x    0)
+	     (nth (board    y    ) (+ x 1) 0)]
+	    [(nth (board (+ y 1) ) (- x 1) 0)
+	     (nth (board (+ y 1) )    x    0)
+	     (nth (board (+ y 1) ) (+ x 1) 0)] ))
 
 (defn live-neighbors [board x y]
 	(count-live-neighbors
